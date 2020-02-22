@@ -1,0 +1,62 @@
+ext {
+    //Android
+    minSdkVersion = 21
+    targetSdkVersion = 28
+    versionCode = 1
+    versionName = "1.0"
+    compileSdkVersion = 28
+    buildToolsVersion = "29.0.0"
+
+    //JVMCompatibility
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+    //Libraries
+    koin_version = "2.0.1"
+    retrofit_version = '2.5.0'
+    okhttp_logging = '4.2.1'
+    lifecycle_version = '2.1.0'
+    rxJavaVersion = '2.2.2'
+    rxAndroidVersion = '2.1.0'
+    pagingVersion = '2.0.0'
+    navigationVersion = '2.1.0-alpha01'
+    frag_version = '1.2.0-beta02'
+
+    koinDependencies = [
+            koin_core      : "org.koin:koin-core:$koin_version",
+            koin_android   : "org.koin:koin-android:$koin_version",
+            koin_scope     : "org.koin:koin-android-scope:$koin_version",
+            koin_view_model: "org.koin:koin-android-viewmodel:$koin_version",
+            koin_ext       : "org.koin:koin-android-ext:$koin_version"
+    ]
+
+    rxJavaDependencies = [
+            rxJava   : "io.reactivex.rxjava2:rxjava:$rxJavaVersion",
+            rxAndroid: "io.reactivex.rxjava2:rxandroid:$rxAndroidVersion"
+    ]
+
+    retrofitDependencies = [
+            retrofit              : "com.squareup.retrofit2:retrofit:$retrofit_version",
+            retrofitJsonConverter : "com.squareup.retrofit2:converter-gson:$retrofit_version",
+            retrofitRxJava2Adapter: "com.squareup.retrofit2:adapter-rxjava2:2.4.0",
+            okHttpLogging         : "com.squareup.okhttp3:logging-interceptor:$okhttp_logging",
+
+    ]
+
+    pagingDependencies = [
+            pagingRuntime: "androidx.paging:paging-runtime:$pagingVersion",
+            pagingRxJava : "androidx.paging:paging-rxjava2:$pagingVersion"
+    ]
+
+    liveDataDependencies = [
+            liveData: "androidx.lifecycle:lifecycle-livedata:$lifecycle_version"
+    ]
+
+    navigationDependencies = [
+            navigationFragment: "androidx.navigation:navigation-fragment-ktx:2.2.0-alpha01",
+            navigationUI      : "androidx.navigation:navigation-ui-ktx:2.2.0-alpha01",
+            fragment          : "androidx.fragment:fragment:$frag_version"
+    ]
+}
