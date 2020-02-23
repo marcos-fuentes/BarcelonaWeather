@@ -9,7 +9,7 @@ import com.example.presentation.model.WeatherLocal
 import com.example.service.repository.WeatherRepository
 
 
-class ProductViewModel(
+class WeatherViewModel(
     private val repository: WeatherRepository,
     private val mapper: WeatherViewMapper
 ) : ViewModel() {
