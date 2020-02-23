@@ -13,7 +13,7 @@ import java.util.*
 
 class ForecastAdapter(
     var context: Context?,
-    var forecastWeatherLocal: ArrayList<ForecastElementLocal>
+    var forecastWeatherLocal: List<ForecastElementLocal>
 ) : RecyclerView.Adapter<ForecastAdapter.ForeCastViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ForeCastViewHolder {
         val view =
@@ -35,7 +35,7 @@ class ForecastAdapter(
 
 
         fun bind(forecastElementLocal: ForecastElementLocal) {
-            itemView.forecastTemp.text = forecastElementLocal.temp.day.toString() + " ºC"
+            itemView.forecastTemp.text = forecastElementLocal.temp.day.toInt().toString() + " ºC"
             itemView.forecastWeatherIcon.setImageResource(
                 ImageHelper.getImageOfWeather(
                     forecastElementLocal.weather[0].icon

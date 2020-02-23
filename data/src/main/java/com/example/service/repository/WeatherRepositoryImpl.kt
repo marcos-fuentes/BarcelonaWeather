@@ -12,9 +12,13 @@ import retrofit2.Response
 
 class WeatherRepositoryImpl(private val weatherApi: WeatherApi) : WeatherRepository {
     private val TAG: String = this::class.java.simpleName
-    override fun getWeatherFromCity(cityName: String, appid: String): LiveData<WeatherResponse> {
+    override fun getWeatherFromCity(
+        cityName: String,
+        units: String,
+        appid: String
+    ): LiveData<WeatherResponse> {
         val data: MutableLiveData<WeatherResponse> = MutableLiveData()
-        weatherApi.getWeather(cityName, appid)
+        weatherApi.getWeather(cityName, units, appid)
             .enqueue(object : Callback<WeatherResponse?> {
                 override fun onResponse(
                     call: Call<WeatherResponse?>,
@@ -42,10 +46,11 @@ class WeatherRepositoryImpl(private val weatherApi: WeatherApi) : WeatherReposit
     override fun getForecastWeatherFromCity(
         cityName: String,
         daysNumber: Int,
+        units: String,
         appid: String
     ): LiveData<ForecastWeatherResponse> {
         val data: MutableLiveData<ForecastWeatherResponse> = MutableLiveData()
-        weatherApi.getForecastWeather(cityName, daysNumber, appid)
+        weatherApi.getForecastWeather(cityName, daysNumber, units, appid)
             .enqueue(object : Callback<ForecastWeatherResponse?> {
                 override fun onResponse(
                     call: Call<ForecastWeatherResponse?>,

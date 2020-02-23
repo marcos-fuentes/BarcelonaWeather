@@ -142,7 +142,7 @@
                 android:textColor="@android:color/white"
                 android:textSize="15sp" />
 
-            <view
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
                 android:layout_marginTop="2dp"
@@ -151,7 +151,7 @@
         </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/forecastWeather"
+            android:id="@+id/rvForecastWeather"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp" />
