@@ -1,24 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="75dp"
-    android:layout_height="75dp"
-    android:background="#03A9F4"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
     android:gravity="center"
     android:layout_margin="2dp"
     android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/forecastDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        android:fontFamily="sans-serif-black"
+        android:ellipsize="end"
+        tools:text="SAT"/>
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/forecastWeatherIcon"
         android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_height="45dp"
         android:src="@drawable/fewclouds" />
     <TextView
         android:id="@+id/forecastTemp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
-        android:textSize="20dp"
+        android:textSize="15sp"
         android:ellipsize="end"
         tools:text="30ºC"/>
 </LinearLayout>

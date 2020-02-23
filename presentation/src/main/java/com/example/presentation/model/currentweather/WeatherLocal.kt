@@ -3,17 +3,17 @@ package com.example.presentation.model.currentweather
 import com.example.service.model.*
 
 data class WeatherLocal(
-    val coord: CoordLocal,
-    val weather: List<WeatherElementLocal>,
-    val base: String,
-    val main: MainLocal,
-    val visibility: Long,
-    val wind: WindLocal,
-    val clouds: CloudsLocal,
-    val dt: Long,
-    val sys: SysLocal,
-    val timezone: Long,
-    val id: Long,
-    val name: String,
-    val cod: Long
+    var coord: CoordLocal,
+    var weather: List<WeatherElementLocal>,
+    var base: String,
+    var main: MainLocal,
+    var visibility: Long,
+    var wind: WindLocal,
+    var clouds: CloudsLocal,
+    var dt: Long,
+    var sys: SysLocal,
+    var timezone: Long,
+    var id: Long,
+    var name: String,
+    var cod: Long
 )
