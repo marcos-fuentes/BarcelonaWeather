@@ -21,9 +21,15 @@ class WeatherActivity : AppCompatActivity() {
     }
 
     fun observeViewModel() {
-       weatherViewModel.getWeather().observe(this, Observer {
-           var it1 = it
+        weatherViewModel.getWeather().observe(this, Observer {
+            var it1 = it
+            println(it1)
+        })
 
-       })
+
+        weatherViewModel.getForecastWeather().observe(this, Observer {
+            var it1 = it
+            println(it1)
+        })
     }
 }

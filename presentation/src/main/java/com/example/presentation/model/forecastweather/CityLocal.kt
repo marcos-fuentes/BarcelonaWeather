@@ -6,7 +6,7 @@ data class CityLocal (
     val lat: Double,
     val lon: Double,
     val country: String,
-    val iso2: String,
-    val type: String,
+    val iso2: String?,
+    val type: String?,
     val population: Long
 )

@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.service.api.WeatherApi
 import com.example.service.model.currentweather.WeatherResponse
+import com.example.service.model.forecastweather.ForecastWeatherResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -42,13 +43,13 @@ class WeatherRepositoryImpl(private val weatherApi: WeatherApi) : WeatherReposit
         cityName: String,
         daysNumber: Int,
         appid: String
-    ): LiveData<WeatherResponse> {
-        val data: MutableLiveData<WeatherResponse> = MutableLiveData()
+    ): LiveData<ForecastWeatherResponse> {
+        val data: MutableLiveData<ForecastWeatherResponse> = MutableLiveData()
         weatherApi.getForecastWeather(cityName, daysNumber, appid)
-            .enqueue(object : Callback<WeatherResponse?> {
+            .enqueue(object : Callback<ForecastWeatherResponse?> {
                 override fun onResponse(
-                    call: Call<WeatherResponse?>,
-                    response: Response<WeatherResponse?>
+                    call: Call<ForecastWeatherResponse?>,
+                    response: Response<ForecastWeatherResponse?>
                 ) {
                     Log.d(
                         TAG,
@@ -60,7 +61,7 @@ class WeatherRepositoryImpl(private val weatherApi: WeatherApi) : WeatherReposit
                 }
 
                 override fun onFailure(
-                    call: Call<WeatherResponse?>,
+                    call: Call<ForecastWeatherResponse?>,
                     t: Throwable
                 ) {
                     data.value = null

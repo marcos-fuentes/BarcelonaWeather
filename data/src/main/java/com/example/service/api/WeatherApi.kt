@@ -3,6 +3,7 @@ package com.example.service.api
 import androidx.annotation.IntegerRes
 import androidx.core.provider.FontsContractCompat
 import com.example.service.model.currentweather.WeatherResponse
+import com.example.service.model.forecastweather.ForecastWeatherResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
@@ -20,5 +21,5 @@ interface WeatherApi {
         @Query("q") city: String,
         @Query("cnt") numberDays: Int,
         @Query("appid") apiKey: String
-    ): Call<WeatherResponse>
+    ): Call<ForecastWeatherResponse>
 }
