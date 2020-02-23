@@ -1,9 +1,10 @@
 package com.example.presentation.mapper
 
-import com.example.presentation.model.WeatherLocal
+import com.example.presentation.model.currentweather.WeatherLocal
 import com.example.service.model.*
+import com.example.service.model.currentweather.*
 
-class WeatherViewMapper {
+class CurrentWeatherViewMapper {
     fun mapTo(weatherResponse: WeatherResponse): WeatherLocal {
         return WeatherLocal(
             coordMapper(weatherResponse.coord),

@@ -1,4 +1,4 @@
-package com.example.presentation.model
+package com.example.presentation.model.currentweather
 
 import com.example.service.model.*
 

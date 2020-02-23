@@ -4,7 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.example.service.api.WeatherApi
-import com.example.service.model.WeatherResponse
+import com.example.service.model.currentweather.WeatherResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

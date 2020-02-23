@@ -4,14 +4,14 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
-import com.example.presentation.mapper.WeatherViewMapper
-import com.example.presentation.model.WeatherLocal
+import com.example.presentation.mapper.CurrentWeatherViewMapper
+import com.example.presentation.model.currentweather.WeatherLocal
 import com.example.service.repository.WeatherRepository
 
 
 class WeatherViewModel(
     private val repository: WeatherRepository,
-    private val mapper: WeatherViewMapper
+    private val mapper: CurrentWeatherViewMapper
 ) : ViewModel() {
     private var lvWeather: LiveData<WeatherLocal> = MutableLiveData()
 

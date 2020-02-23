@@ -1,7 +1,7 @@
 package com.example.service.repository
 
 import androidx.lifecycle.LiveData
-import com.example.service.model.WeatherResponse
+import com.example.service.model.currentweather.WeatherResponse
 
 interface WeatherRepository {
     fun getWeatherFromCity(cityName: String, appid: String): LiveData<WeatherResponse>

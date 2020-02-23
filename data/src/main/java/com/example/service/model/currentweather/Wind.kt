@@ -1,4 +1,4 @@
-package com.example.service.model
+package com.example.service.model.currentweather
 
 data class Wind (
     val speed: Double,
