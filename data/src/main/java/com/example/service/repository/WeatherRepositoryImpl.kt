@@ -38,4 +38,35 @@ class WeatherRepositoryImpl(private val weatherApi: WeatherApi) : WeatherReposit
         return data
     }
 
+    override fun getForecastWeatherFromCity(
+        cityName: String,
+        daysNumber: Int,
+        appid: String
+    ): LiveData<WeatherResponse> {
+        val data: MutableLiveData<WeatherResponse> = MutableLiveData()
+        weatherApi.getForecastWeather(cityName, daysNumber, appid)
+            .enqueue(object : Callback<WeatherResponse?> {
+                override fun onResponse(
+                    call: Call<WeatherResponse?>,
+                    response: Response<WeatherResponse?>
+                ) {
+                    Log.d(
+                        TAG,
+                        "onResponse response:: $response"
+                    )
+                    if (response.body() != null) {
+                        data.value = response.body()
+                    }
+                }
+
+                override fun onFailure(
+                    call: Call<WeatherResponse?>,
+                    t: Throwable
+                ) {
+                    data.value = null
+                }
+            })
+        return data
+    }
+
 }
