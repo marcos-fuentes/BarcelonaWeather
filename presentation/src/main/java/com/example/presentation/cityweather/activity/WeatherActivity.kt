@@ -51,7 +51,7 @@ class WeatherActivity : AppCompatActivity() {
         cityName.text = DateHelper.getDayOfTheWeek() + ", "+it!!.name
         ivWeather.setImageResource(ImageHelper.getImageOfWeather(it.weather[0].icon))
         tvWeatherDescription.text = it!!.weather[0].description
-        tvWeatherTemp.text = it!!.main.temp.toInt().toString() + "ºC"
+        tvWeatherTemp.text = it!!.main.temp.toInt().toString() + " ºC"
         tvPreassure.text = it!!.main.pressure.toInt().toString() + "hpa"
         tvHumidity.text =it!!.main.humidity.toInt().toString() + "%"
         tvWind.text =it!!.wind.speed.toInt().toString() + "m/s"

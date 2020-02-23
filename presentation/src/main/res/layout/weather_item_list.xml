@@ -15,12 +15,14 @@
         android:textSize="13sp"
         android:fontFamily="sans-serif-black"
         android:ellipsize="end"
+        android:gravity="center_horizontal"
         tools:text="SAT"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/forecastWeatherIcon"
         android:layout_width="50dp"
         android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
         android:src="@drawable/fewclouds" />
     <TextView
         android:id="@+id/forecastTemp"
@@ -29,5 +31,6 @@
         android:textColor="@android:color/white"
         android:textSize="15sp"
         android:ellipsize="end"
+        android:gravity="center_horizontal"
         tools:text="30ºC"/>
 </LinearLayout>

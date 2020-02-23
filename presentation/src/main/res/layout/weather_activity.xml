@@ -16,13 +16,8 @@
 
         <TextView
             android:id="@+id/cityName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:textColor="@android:color/white"
-            android:textSize="30dp"
-            tools:text="Barcelona"></TextView>
+            tools:text="Barcelona"
+            style="@style/weather_title_name" />
 
 
         <androidx.appcompat.widget.AppCompatImageView
@@ -35,30 +30,20 @@
 
         <TextView
             android:id="@+id/tvWeatherDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="monospace"
-            android:textColor="@android:color/white"
-            android:textSize="20dp"
-            tools:text="FEW CLOUDS"></TextView>
+            tools:text="FEW CLOUDS"
+            style="@style/weather_description" />
 
         <TextView
             android:id="@+id/tvWeatherTemp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@android:color/white"
-            android:textSize="40dp"
-            tools:text="30ºC">
+            tools:text="30ºC"
+            style="@style/weather_temp">
 
 
         </TextView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:layout_weight="0.9"
@@ -69,7 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.3"
                 android:gravity="center"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                tools:ignore="NestedWeights">
 
                 <androidx.appcompat.widget.AppCompatImageView
                     android:layout_width="30dp"
@@ -78,13 +64,8 @@
 
                 <TextView
                     android:id="@+id/tvPreassure"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="6dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="15sp"
-                    tools:text="10009 HPA" />
+                    tools:text="10009 HPA"
+                    style="@style/weather_detail" />
             </LinearLayout>
 
             <LinearLayout
@@ -101,13 +82,8 @@
 
                 <TextView
                     android:id="@+id/tvHumidity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="6dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="15sp"
-                    tools:text="74% " />
+                    tools:text="74% "
+                    style="@style/weather_detail" />
             </LinearLayout>
 
             <LinearLayout
@@ -124,13 +100,8 @@
 
                 <TextView
                     android:id="@+id/tvWind"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginStart="6dp"
-                    android:textColor="@android:color/white"
-                    android:textSize="15sp"
-                    tools:text="4 m/s" />
+                    tools:text="4 m/s"
+                    style="@style/weather_detail" />
             </LinearLayout>
 
         </LinearLayout>
@@ -142,12 +113,8 @@
             android:orientation="vertical">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:text="Next 10 Days"
-                android:textColor="@android:color/white"
-                android:textSize="15sp" />
+                android:text="@string/next_10_days"
+                style="@style/next_days" />
 
             <View
                 android:layout_width="match_parent"
@@ -159,6 +126,7 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvForecastWeather"
+            android:layout_gravity="center_horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp" />
