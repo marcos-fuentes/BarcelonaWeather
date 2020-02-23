@@ -1,6 +1,11 @@
 package com.example.barcelonaweather.di
 
 import android.app.Application
+import com.example.presentation.di.viewMapperModule
+import com.example.presentation.di.viewModelModule
+import com.example.service.di.apiModule
+import com.example.service.di.netModule
+import com.example.service.di.repositoryModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
@@ -14,7 +19,11 @@ object KoinHelper {
             androidLogger(Level.DEBUG)
             modules(
                 listOf(
-                    //MODULE DEFINITION
+                    netModule,
+                    apiModule,
+                    repositoryModule,
+                    viewModelModule,
+                    viewMapperModule
                 )
             )
         }

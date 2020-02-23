@@ -27,4 +27,8 @@ class WeatherViewModel(
             mapper.mapTo(input)
         }
     }
+
+    fun getWeather():LiveData<WeatherLocal>{
+        return lvWeather
+    }
 }

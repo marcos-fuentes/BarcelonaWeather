@@ -8,6 +8,4 @@ class BarcelonaWeatherApplication : Application() {
         super.onCreate()
         startKoin(this)
     }
-
-
 }
